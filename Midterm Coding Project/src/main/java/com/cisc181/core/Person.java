@@ -53,7 +53,8 @@ public abstract class Person implements java.io.Serializable {
 		OverHundred.add(Calendar.YEAR, -100);
 		Date OverHundredDOB = OverHundred.getTime();
 		
-		if (DOB.compareTo(OverHundredDOB) < 0) {
+		//if DOB is over one hundred years old then "compareTo" will be -1
+		if (DOB.compareTo(OverHundredDOB) >= 0) {
 			this.setDOB(DOB);
 		}
 		
@@ -70,7 +71,8 @@ public abstract class Person implements java.io.Serializable {
 	public String getAddress() {
 		return address;
 	}
-
+	
+	//setting the proper format for phone numbers
 	public void setPhone(String newPhone_number) throws PersonException {
 		String regex = "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$";
 		Pattern pattern = Pattern.compile(regex);
