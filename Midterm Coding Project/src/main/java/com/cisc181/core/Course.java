@@ -5,12 +5,14 @@ import java.util.UUID;
 import com.cisc181.eNums.eMajor;
 
 public class Course {
-
+		
+		//create attributes
 		private UUID CourseID;
 		private String CourseName;
 		private int GradePoints;
 		private eMajor Major;
 		
+		//no arg
 		public Course() {
 		}
 
@@ -20,7 +22,8 @@ public class Course {
 			this.GradePoints = GradePoints;
 			this.Major = Major;
 		}
-
+		
+		//getters
 		public UUID getCourseID() {
 			return CourseID;
 		}

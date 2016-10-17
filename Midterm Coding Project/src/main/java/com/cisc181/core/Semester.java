@@ -5,10 +5,12 @@ import java.util.UUID;
 
 public class Semester {
 	
+	//create attributes
 	private UUID SemesterID;
 	private Date StartDate;
 	private Date EndDate;
 
+	//no arg
 	public Semester() {
 	}
 	
@@ -18,6 +20,7 @@ public class Semester {
 		this.EndDate = EndDate;
 	}
 
+	//getters
 	public UUID getSemesterID() {
 		return SemesterID;
 	}

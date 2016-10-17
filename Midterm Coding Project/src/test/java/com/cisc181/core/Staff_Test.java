@@ -18,6 +18,7 @@ public class Staff_Test {
 	public static void setup() {
 	}
 	
+	//Add 5 staff members and calculate average salary.
 	@Test (expected = PersonException.class)
 	public void test() throws PersonExcpetion {
 		ArrayList<Staff> StfList = new ArrayList<Staff>();
@@ -38,6 +39,7 @@ public class Staff_Test {
 		assertTrue(avgSalary == 60000);
 	}	
 
+	//Test for a wrong Date of Birth.
 	@Test (expected = PersonException.class)
 	public void testInvalidDOB() throws PersonException {
 		Calendar t = Calendar.getInstance();
@@ -47,6 +49,7 @@ public class Staff_Test {
 				"1-2", 1, 1000, new Date(100),eTitle.MS);
 	}
 	
+	//Test for an improperly formatted phone number.
 	@Test (expected = PersonException.class)
 	public void testInvalidPhone() throws PersonException {
 		Staff invStaff1 = new Staff("Sam", "Middle", "Smith", new Date(0), "10 Main St.", "000-000-000", "sms1@udel.edu",

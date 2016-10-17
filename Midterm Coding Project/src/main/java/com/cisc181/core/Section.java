@@ -4,11 +4,13 @@ import java.util.UUID;
 
 public class Section {
 	
+	//create attributes
 	private UUID CourseID;
 	private UUID SemesterID;
 	private UUID SectionID;
 	private int RoomID;	
 
+	//no arg
 	public Section() {	
 		this.SectionID = UUID.randomUUID();
 	}
@@ -20,6 +22,7 @@ public class Section {
 		this.SectionID = UUID.randomUUID();	
 	}
 
+	//getters and setters
 	public UUID getCourseID() {
 		return CourseID;
 	}

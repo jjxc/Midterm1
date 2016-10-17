@@ -13,12 +13,14 @@ import com.cisc181.eNums.eMajor;
 
 public class Student_Test {
 	
+	//Create ArrayLists
 	static ArrayList<Course> crsList;
 	static ArrayList<Semester> semList;
 	static ArrayList<Section> secList;
 	static ArrayList<Student> stuList;
 	
-
+	
+	//Set up the lists before testing.
 	@BeforeClass
 	public static void setup() throws Exception {
 		crsList = new ArrayList<Course>();
@@ -48,6 +50,7 @@ public class Student_Test {
 		stuList.add(new Student ("firstName", "middleName", "lastName", new Date(0), eMajor.NURSING, "10 Hall St", "(000)-000-0010", "stu10@udel.edu"));
 	}
 
+	//Enroll the students and set their grades.
 	@Test
 	public void testEnroll() {
 		ArrayList<Enrollment> enrollList = new ArrayList<Enrollment>();
@@ -59,7 +62,9 @@ public class Student_Test {
 			
 		}
 	}
+	//TODO Calculate GPAs and sectionGPAs
 	
+	//Change a student's major
 	@Test
 	public void testMajorChg() {
 		stuList.get(0).setMajor(eMajor.COMPSI);
